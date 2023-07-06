@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SIF demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/200683e5c5.js" crossorigin="anonymous"></script>
+
+    
+  </head>
+  <body>
+    <div class="main-container d-flex">
+      <div class="sidebar" id="side_nav"> 
+        <div class="header-box px-2 pt-3 pb-4 d-flex justify-content-between">
+          <h1 class="fs-4"><span class="bg-white text-dark rounded shadow px-2 me-2">SIF</span><span class="text-white">Systeme d'information fonciere</span></h1>
+          <button class="btn d-md-none d-block close-btn px-1 py-0 text-white"><i class="fa-solid fa-bars-staggered"></i></button>
+        </div>
+        <ul class="list-unstyled px-2">
+          <li class=""><a href="index.html" class="text-decoration-none px-3 py-2 d-block"><i class="fa-solid fa-house"></i> Tabeau de bord</a></li>
+          <li class=""><a href="recherche.html" class="text-decoration-none px-3 py-2 d-block"><i class="fa-solid fa-magnifying-glass"></i> Recherche</a></li>
+          <li class=""><a href="module.html" class="text-decoration-none px-3 py-2 d-block">Module CEC</a></li>
+          <li class="active"><a href="import_doc.html" class="text-decoration-none px-3 py-2 d-block"><i class="fa-solid fa-file"></i> Import de document</a></li>
+          <li class=""><a href="cartographie.html" class="text-decoration-none px-3 py-2 d-block"><i class="fa-solid fa-map"></i> Cartographie</a></li>
+          <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block"><i class="fa-solid fa-book"></i> Bibliotheque</a></li>
+          <li class=""><a href="Administration.html" class="text-decoration-none px-3 py-2 d-block "><i class="fa-solid fa-user"></i> Administration</a></li>
+
+        </ul>
+        <hr class="h-color mx-2">
+        
+
+      </div>
+      <div class="content ">
+        <nav class="navbar navbar-expand-md navbar-dark bg-muted border-bottom shadow p-4 mb-4 bg-white " id="navigation">
+          <div class="container-fluid ">
+            <div class="d-flex justify-content-between  d-block d-md-none d-block">
+              <button class="btn px-1 py-0 open-btn me-2"><i class="fa-solid fa-bars-staggered"></i></button> 
+              <a class="navbar-brand fs-4 " href="#"><span class="bg-dark rounded  text-white">SIF</span></a>
+            </div>
+            <button class="navbar-toggler px-0 border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+              <i class="fa-solid fa-list-radio"></i>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end px-2 d-flex" id="mynavbar">
+              <span class=""> Utilisateur <i class="fa-solid fa-user"></i></span>
+            </div>
+          </div>
+        </nav>
+        <!-- contenu -->
+        <div class="dashboard-content px-3 pt-2">
+          <h2 class="fs-2">Import du document</h2>
+          <div class="container">
+           <div class="row my-3">
+            <div class="col-sm col-md">
+                <span><button><i class="fa-solid fa-magnifying-glass"></i></button> <input type="text" placeholder="N°Dossier.."></span>                                 
+            </div>
+            <div class="col-sm col-md">
+               <span><button><i class="fa-solid fa-magnifying-glass"></i></button><input type="text" placeholder="Recherche.."></span>      
+            </div>
+           </div>
+           <p class="fw-bold">KAB001-0152</p>
+           <h5>Liste des documents associés à cette instruction</h5>
+
+           <div class="table-responsive">
+            <table class="table table-bordered table-sm table-responsive-md table-responsive-sm ">
+              <thead>
+                <tr>
+                  <th>Firstname</th>
+                  <th>Lastname</th>
+                  <th>Email</th>
+                  <th>Email</th>
+                  <th>Email</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>John</td>
+                  <td>Doe</td>
+                  <td>john@example.com</td>
+                  <td>john@example.com</td>
+                  <td>john@example.com</td>
+
+                </tr>
+                <tr>
+                  <td>Mary</td>
+                  <td>Moe</td>
+                  <td>mary@example.com</td>
+                  <td>mary@example.com</td>
+                  <td>mary@example.com</td>
+                </tr>
+                <tr>
+                  <td>July</td>
+                  <td>Dooley</td>
+                  <td>july@example.com</td>
+                  <td>july@example.com</td>
+                  <td>july@example.com</td>
+
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+            <div class="row pt-3 mb-5 justify-content-between " >
+                <h6>Importer un nouveau document</h6>
+                <div class="col-sm col-md">
+                    <div class="input-group">
+                        <select class="form-select" id="document">
+                          <option selected>Type de document</option>
+                          <option>Photo du demandeur</option>
+                          <option>Demande de constatation</option>
+                          <option>Copie légalisée de la pièce d’identité</option>
+                          <option>Mandat</option>     
+                          <option>Avis du public</option>     
+                                
+                        </select>  
+                      </div>
+                </div>
+                <div class="col-sm col-md ">
+                    <button class=" btn btn-lg btn-secondary w-75 ">Importer</button>
+                </div>
+            </div>
+
+          </div>
+          
+         
+          
+          
+        </div>
+        <footer class="footer text-dark text-center shadow-lg p-2 mb-0  ">
+            <p>Footer</p>
+          </footer>
+      </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.3.0/chart.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="index.js"></script>
+    
+  </body>
+</html> 

@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SIF demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/200683e5c5.js" crossorigin="anonymous"></script>
+
+    
+  </head>
+  <body>
+    <div class="main-container d-flex">
+      <div class="sidebar d-block" id="side_nav"> 
+        <div class="header-box px-2 pt-3 pb-4 d-flex justify-content-between">
+          <h1 class="fs-4"><span class="bg-white text-dark rounded shadow px-2 me-2">SIF</span><span class="text-white">Systeme d'information fonciere</span></h1>
+          <button class="btn d-md-none d-block close-btn px-1 py-0 text-white"><i class="fa-solid fa-bars-staggered"></i></button>
+        </div>
+        <ul class="list-unstyled px-2">
+          <li class=""><a href="index.html" class="text-decoration-none px-3 py-2 d-block"><i class="fa-solid fa-house"></i> Tabeau de bord</a></li>
+          <li class=""><a href="recherche.html" class="text-decoration-none px-3 py-2 d-block"><i class="fa-solid fa-magnifying-glass"></i> Recherche</a></li>
+          <li class="active"><a href="module.html" class="text-decoration-none px-3 py-2 d-block">Module CEC</a></li>
+          <li class=""><a href="import_doc.html" class="text-decoration-none px-3 py-2 d-block"><i class="fa-solid fa-file"></i> Import de document</a></li>
+          <li class=""><a href="cartographie.html" class="text-decoration-none px-3 py-2 d-block"><i class="fa-solid fa-map"></i> Cartographie</a></li>
+          <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block"><i class="fa-solid fa-book"></i> Bibliotheque</a></li>
+          <li class=""><a href="Administration.html" class="text-decoration-none px-3 py-2 d-block "><i class="fa-solid fa-user"></i> Administration</a></li>
+
+        </ul>
+        <hr class="h-color mx-2">
+        
+
+      </div>
+      <div class="content">
+        <nav class="navbar navbar-expand-md navbar-dark bg-muted border-bottom shadow p-4 mb-4 bg-white navigation" id="navigation">
+          <div class="container-fluid ">
+            <div class="d-flex justify-content-between  d-block">
+              <button class="btn px-1 py-0 open-btn me-2"><i class="fa-solid fa-bars-staggered"></i></button> 
+              <a class="navbar-brand fs-4 text-success" href="#"><span class="bg-dark rounded  text-white">SIF</span></a>
+            </div>
+            <button class="navbar-toggler px-0 border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+              <i class="fa-solid fa-list-radio"></i>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end px-2 d-flex" id="mynavbar">
+              <span class=""> Utilisateur <i class="fa-solid fa-user"></i></span>
+            </div>
+          </div>
+        </nav>
+        <!-- contenu -->
+        <div class="dashboard-content px-3 pt-2">
+          <h1 class="fs-2 pb-1">Enregistrement de la demande</h1>
+          <div class="row pb-3">
+            <div class=" col-sm-3 col-md-3">
+              <div class="fw-bold">Region : Centrale</div>
+              <div class="fw-bold">Préfecture : Tchamba</div>
+              <div class="fw-bold">Commune : Tchamba 3</div>
+              <div class="form-group d-flex">
+                <label class="m-1 fw-bold" for="canton">Canton:</label>
+                <div class="input-group">
+                  <select class="form-select" id="canton">
+                    <option selected>Choisir</option>
+                    <option>Genève</option>
+                    <option>Vaud</option>
+                    <option>Valais</option>
+                    <option>Fribourg</option>
+                    <option>Neuchâtel</option>
+                    <!-- Ajoutez les autres cantons ici -->
+                  </select>
+                  <!-- <button class="btn btn-outline-secondary" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-chevron-down"></i>
+                  </button> -->
+                </div>
+              </div>
+
+            </div>
+            <div class="col-sm-3 col-md-3 flex-column">
+              <div class="d-flex">Date demande à la SVGF : <input type="text" class="form-control" placeholder=""></div>
+              <div class="d-flex">Date arrivée à la mairie : <input type="text" class="form-control" placeholder=""></div>
+            </div>
+            <div class="col-sm-3 col-md-3 flex-column">
+              <div class="form-check">
+                <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" >Demande individuelle
+                <label class="form-check-label" for="radio1"></label>
+              </div>
+              <div class="form-check">
+                <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" >Demande collective 
+                <label class="form-check-label" for="radio1"></label>
+              </div>
+            </div>
+            <div class="col-sm-3 col-md-3">
+              <span>Date saisie de la demande par SVGF 16/05/2023</span>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-5 col-md-5 border border-dark p-2">
+              <h5>Etat civil requérant individuel/Etat civil mandataire</h5>
+              <div class="row pb-2">
+                <div class="col-sm-6 col-md-6">Nom</div>
+                <div class="col-sm-6 col-md-6"><input type="text" class="form-control"  name="nom"></div>
+              </div>
+              <div class="row pb-2">
+                <div class="col-sm-6 col-md-6">Prenom</div>
+                <div class="col-sm-6 col-md-6"><input type="text" class="form-control"  name="Prenom"></div>
+              </div>
+              <div class="row pb-2">
+                <div class="col-sm-6 col-md-6">Date de naissance</div>
+                <div class="col-sm-6 col-md-6"><input type="date" class="form-control"  name="Date de naissance"></div>
+              </div>
+              <div class="row pb-2">
+                <div class="col-sm-6 col-md-6">Lieu de naissance</div>
+                <div class="col-sm-6 col-md-6"><input type="text" class="form-control"  name="Lieu de naissance"></div>
+              </div>
+              <div class="row pb-2">
+                <div class="col-sm-6 col-md-6">Sexe</div>
+                <div class="col-sm-6 col-md-6">
+                  <div class="input-group">
+                    <select class="form-select" id="sexe">
+                      <!-- <option selected>Choisir</option> -->
+                      <option selected>Masculin</option>
+                      <option>Feminin</option>
+                    </select>  
+                  </div>
+                </div>
+              </div>
+              <div class="row pb-2">
+                <div class="col-sm-6 col-md-6">Profession</div>
+                <div class="col-sm-6 col-md-6"><input type="text" class="form-control"  name="Profession"></div>
+              </div>
+              <div class="row pb-2">
+                <div class="col-sm-6 col-md-6">Domicile</div>
+                <div class="col-sm-6 col-md-6"><input type="text" class="form-control"  name="Domicile"></div>
+              </div>
+              <div class="row pb-2">
+                <div class="col-sm-6 col-md-6">Pere</div>
+                <div class="col-sm-6 col-md-6"><input type="text" class="form-control"  name="Pere"></div>
+              </div>
+              <div class="row pb-2">
+                <div class="col-sm-6 col-md-6">Mere</div>
+                <div class="col-sm-6 col-md-6"><input type="text" class="form-control"  name="Mere"></div>
+              </div>
+
+              <div class="d-flex justify-content-between">
+                <div class="form-check mt-3">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" name="Celibataire">Celibataire</label>
+                </div>
+                <div class="form-check mt-3">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" name="Marie">Marie(e)</label>
+                </div>
+                <div class="form-check mt-3">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" name="Divorce">Divorce(e)</label>
+                </div>
+                <div class="form-check mt-3">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" name="Veuf">Veuf(ve)</label>
+                </div>
+              </div>
+              
+
+            </div>
+            <div class="col-sm-5 col-sm-5">
+              <div class="border border-dark p-2 mb-3">
+                  <h6>Pièce d’identité</h6>
+                <div class="row pb-2">
+                  <div class="col-sm-6 col-md-6">Pièce d’identité</div>
+                  <div class="col-sm-6 col-md-6">
+                    <div class="input-group">
+                      <select class="form-select" id="sexe">
+                        <option selected>CNI</option>
+                        <option>Passport</option>
+                        <option>Carte d'electeur</option>
+                        <option>Permis de conduire</option>
+                      </select>  
+                    </div>
+                </div>
+                </div>  
+                <div class="row pb-2">
+                  <div class="col-sm-6 col-md-6">Numero</div>
+                  <div class="col-sm-6 col-md-6"><input type="number" class="form-control"  name="Numero"></div>
+                </div>
+                <div class="row pb-2">
+                  <div class="col-sm-6 col-md-6">Date de delivrance</div>
+                  <div class="col-sm-6 col-md-6"><input type="date" class="form-control"  name="date delivrance"></div>
+                </div>
+                <div class="row pb-2">
+                  <div class="col-sm-6 col-md-6">Lieu de delivrance</div>
+                  <div class="col-sm-6 col-md-6"><input type="text" class="form-control"  name="Lieu de delivrance"></div>
+                </div>
+                <div class="row pb-2">
+                  <div class="col-sm-6 col-md-6">Nationalite</div>
+                  <div class="col-sm-6 col-md-6"><input type="text" class="form-control"  name="Nationalite"></div>
+                </div>
+              </div>
+
+              <div class="border border-dark p-2">
+                <h6>Description et designation du terrain</h6>
+                <div class="row pb-2">
+                  <div class="col-sm-6 col-md-6">Situation</div>
+                  <div class="col-sm-6 col-md-6"><input type="text" class="form-control"  name="Situation"></div>
+                </div>
+                <div class="row pb-2">
+                  <div class="col-sm-6 col-md-6">Superficie</div>
+                  <div class="col-sm-6 col-md-6 d-flex "><input type="number" class="form-control"  name="Superficie"><span>en ha</span></div>
+                  <span>Limites</span>
+                </div>
+
+                <div class="row pb-2">
+                  <div class="col-sm-6 col-md-6">Nord</div>
+                  <div class="col-sm-6 col-md-6"><input type="number" class="form-control"  name="Nationalite"></div>
+                </div>
+                <div class="row pb-2">
+                  <div class="col-sm-6 col-md-6">Est</div>
+                  <div class="col-sm-6 col-md-6"><input type="number" class="form-control"  name="Est"></div>
+                </div>
+                <div class="row pb-2">
+                  <div class="col-sm-6 col-md-6">Sud</div>
+                  <div class="col-sm-6 col-md-6"><input type="number" class="form-control"  name="Sud"></div>
+                </div>
+                <div class="row pb-2">
+                  <div class="col-sm-6 col-md-6">Ouest</div>
+                  <div class="col-sm-6 col-md-6"><input type="number" class="form-control"  name="Ouest"></div>
+                </div>
+                
+
+              </div>
+              
+
+            </div>
+            <div class="col-sm-2 col-md-2">
+
+              <button type="button" class="btn btn-success btn-lg" style="position: relative; ">Enregistrer</button>
+
+            </div>
+
+          </div>
+
+        </div>
+        <footer class="footer text-dark text-center shadow-lg p-2 mb-0  ">
+          <p>Footer</p>
+        </footer>
+      </div>
+    </div>
+
+    <footer class="mt-5 p-4 bg-dark text-white text-center" style="position: fixed;">
+        
+    </footer>
+      
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="index.js"></script>
+    
+  </body>
+</html> 

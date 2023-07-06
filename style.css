@@ -1,0 +1,120 @@
+
+html, body {
+    height: 100%;
+    background: #eee;
+   
+}
+
+
+#side_nav {
+    background-color: #303030;
+    max-width: 250px;
+    max-height: 100%;
+    position: relative;
+    left: 0;
+    top: 0;
+    padding: 20px;
+    /* min-width: 250px; */
+    transition: all 0.3s;
+    
+}
+
+#navigation {
+    max-width: 100%;
+}
+
+
+.content {
+    min-height: 100vh;
+    /* width: 100%;  */
+    width: 100%;
+    /* margin-left: 250px;*/
+    padding: 10px; 
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    
+}
+.dashboard-content{
+    flex-grow: 1;
+}
+.footer {
+    margin-top: auto;
+    background-color: #5e5e5e;
+    
+
+}
+
+hr.h-color{
+    background-color: #eee;
+}
+.sidebar li.active{
+    background: #eee;
+    border-radius: 8px;
+}
+.sidebar li.active a, .sidebar li.active a:hover {
+    color: #000;
+}
+.sidebar li a {
+    color: #fff;
+}
+.card-wrap {
+    column-gap: 15px;
+}
+/*pour les boutton dans modules CEC*/
+/* .btn-block {
+    margin-bottom: 10px;
+  } */
+.btn-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.btn-block {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+.btn {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+/* .dashboard-content {
+    width: 100%;
+} */
+ 
+@media (max-width: 767px) {
+    #side_nav {
+        margin-left: -250px; 
+        position: fixed;
+        min-height: 100vh;
+        max-width: 250px;
+        z-index: 1;
+    }
+
+    #side_nav.active {
+        margin-left: 0;
+       
+    }
+    .card-wrap {
+        position: relative;
+        justify-content: center;
+    }
+    .card-top {
+        padding-bottom: 10px;
+    }
+    .card-bottom {
+        padding-top: 10px;
+    }
+    .card-row {
+        position: relative;
+        padding-left: 20px;
+    }
+    
+}
+
